@@ -1,0 +1,44 @@
+{
+  "name": "expense-splitter-api",
+  "version": "1.0.0",
+  "description": "nodeJS API for expense-splitter API MERN",
+  "main": "server.ts",
+  "scripts": {
+    "build": "tsc",
+    "serve": "nodemon",
+    "debug": "tsc --watch src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "author": "Hari Charan K",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "inversify": "^5.0.1",
+    "inversify-binding-decorators": "^4.0.0",
+    "inversify-express-utils": "^6.3.2",
+    "inversify-logger-middleware": "^3.1.0",
+    "mongodb": "^3.5.9",
+    "reflect-metadata": "^0.1.13",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.7",
+    "@types/mongodb": "^3.5.25",
+    "@types/node": "^14.0.20",
+    "eslint": "^7.4.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.6"
+  }
+}
