@@ -1,11 +1,19 @@
 import { json, urlencoded } from "body-parser";
 import cors from "cors";
+import { Errback, NextFunction, Request, Response } from "express";
 import { InversifyExpressServer } from "inversify-express-utils";
+import { validationError } from "./middlewares/validation";
 import { IocContainer } from "./utils/ioc/container";
 
-const errConfig = (err: any, req: any, res: any, next: any) => {
-  console.error(err.stack);
-  res.status(500).send("Something broke!");
+const errConfig = (
+  err: Errback,
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  res
+    .status(res.statusCode || 500)
+    .json(err || { error: "Internal Server Error" });
 };
 
 export class App {
@@ -18,6 +26,7 @@ export class App {
         expApp.use(cors());
       })
       .setErrorConfig(expApp => {
+        expApp.use(validationError);
         expApp.use(errConfig);
       });
   }

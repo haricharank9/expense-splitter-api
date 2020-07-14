@@ -1,13 +1,12 @@
 import { Db, MongoClient } from "mongodb";
-import { fluentProvide } from "inversify-binding-decorators";
-import { environment } from "../../environment/environment";
 import { TYPES } from "../../constants/types";
+import { environment } from "../../environment/environment";
 import { provideSingleton } from "../ioc/provide-singleton";
 
 @provideSingleton(TYPES.MongoDBConnection)
 export class MongoDBConnection {
   private _isConnected: boolean = false;
-  private _db: any;
+  private _db: Db;
 
   public getConnection(result: (connection: Db) => void) {
     if (this._isConnected) {

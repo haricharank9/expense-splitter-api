@@ -1,12 +1,12 @@
-import { provide } from "inversify-binding-decorators";
 import { inject } from "inversify";
+import { provide } from "inversify-binding-decorators";
 import { Db, ObjectID } from "mongodb";
 import { TYPES } from "../../constants/types";
 import { MongoDBConnection } from "./connection";
 
 @provide(TYPES.MongoDBClient)
 export class MongoDBClient {
-  public db: any;
+  public db: Db;
 
   constructor(
     @inject(TYPES.MongoDBConnection) private connection: MongoDBConnection

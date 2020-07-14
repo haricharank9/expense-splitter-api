@@ -6,7 +6,6 @@
   "scripts": {
     "build": "tsc",
     "serve": "nodemon",
-    "debug": "tsc --watch src/server.ts",
     "start": "node dist/server.js"
   },
   "author": "Hari Charan K",
@@ -17,6 +16,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "class-validator": "^0.12.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -24,6 +24,7 @@
     "inversify-binding-decorators": "^4.0.0",
     "inversify-express-utils": "^6.3.2",
     "inversify-logger-middleware": "^3.1.0",
+    "json-typescript-mapper": "^1.1.3",
     "mongodb": "^3.5.9",
     "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.1.4"
@@ -34,6 +35,7 @@
     "@types/express": "^4.17.7",
     "@types/mongodb": "^3.5.25",
     "@types/node": "^14.0.20",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
     "eslint": "^7.4.0",
     "eslint-plugin-import": "^2.22.0",
     "nodemon": "^2.0.4",
