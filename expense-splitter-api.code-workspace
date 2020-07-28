@@ -1,9 +1,11 @@
 {
-	"folders": [{
-		"path": "."
-	}],
-	"settings": {
-		"vscOrganizeImports.formatOnSave": false
-	},
-
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "vscOrganizeImports.formatOnSave": false,
+    "editor.codeActionsOnSave": null
+  }
 }

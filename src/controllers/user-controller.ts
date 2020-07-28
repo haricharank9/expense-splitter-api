@@ -3,10 +3,8 @@ import { inject } from "inversify";
 import {
   BaseHttpController,
   controller,
-
-
-
-  httpPost, request,
+  httpPost,
+  request,
   response
 } from "inversify-express-utils";
 import { TYPES } from "../constants/types";
@@ -18,9 +16,8 @@ import { UserService } from "../services/user-service";
 export class UserController extends BaseHttpController {
   constructor(@inject(TYPES.UserService) private userService: UserService) {
     super();
-    this.userService = userService;
   }
-  @httpPost("/create", validate<CreateUser>(CreateUser))
+  @httpPost("/sign-up", validate<CreateUser>(CreateUser))
   public async createUser(@request() req: Request, @response() res: Response) {
     try {
       await this.userService.create(req.body);

@@ -11,9 +11,7 @@ const errConfig = (
   res: Response,
   next: NextFunction
 ) => {
-  res
-    .status(res.statusCode || 500)
-    .json(err || { error: "Internal Server Error" });
+  res.status(500).json({ error: err || "Internal Server Error" });
 };
 
 export class App {

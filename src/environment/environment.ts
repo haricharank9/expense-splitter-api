@@ -7,5 +7,8 @@ if (fs.existsSync(".env")) {
 export const environment = {
   production: process.env.NODE_ENV,
   PORT: process.env.PORT!,
-  MONGO_CONNECTION: process.env.MONGO_CONNECTION!
+  MONGO_CONNECTION: process.env.MONGO_CONNECTION!,
+  SIGNING_SECRET: process.env.SIGNING_SECRET!,
+  AUDIENCE: process.env.AUDIENCE!,
+  TOKEN_EXPIRY: process.env.TOKEN_EXPIRY!
 };
