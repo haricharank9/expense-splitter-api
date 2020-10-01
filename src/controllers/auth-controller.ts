@@ -8,9 +8,9 @@ import {
   response
 } from "inversify-express-utils";
 import { SignUp } from "../models/request/signup";
-import { AuthService } from "../services/auth-service";
+import { AuthService } from "../services";
 import { TYPES } from "../constants/types";
-import { validate } from "../middlewares/validation";
+import { validate } from "../middlewares";
 import { mapper } from "../utils/mapper";
 import { SignUpData } from "../models/data/signup-data";
 import { LoginRequest } from "../models/request/login-request";

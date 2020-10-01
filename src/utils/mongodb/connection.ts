@@ -20,7 +20,9 @@ export class MongoDBConnection {
 
   private async connect() {
     try {
-      const client = await MongoClient.connect(environment.MONGO_CONNECTION);
+      const client = await MongoClient.connect(environment.MONGO_CONNECTION, {
+        useUnifiedTopology: true
+      });
       this._db = client.db();
       this._isConnected = true;
     } catch (err) {

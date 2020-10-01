@@ -1,13 +1,12 @@
-import { hash, compare } from "bcryptjs";
+import { compare, hash } from "bcryptjs";
 import { inject } from "inversify";
 import { provide } from "inversify-binding-decorators";
 import { sign } from "jsonwebtoken";
 import { TYPES } from "../constants/types";
-import { SignUpData } from "../models/data/signup-data";
-import { MongoDBClient } from "../utils/mongodb/client";
-import { collections } from "../utils/mongodb/collections";
-import { CreateJwt } from "../models/domain/create-jwt";
 import { environment } from "../environment/environment";
+import { SignUpData } from "../models/data/signup-data";
+import { CreateJwt } from "../models/domain/create-jwt";
+import { collections, MongoDBClient } from "../utils/mongodb";
 @provide(TYPES.AuthService)
 export class AuthService {
   private _client: MongoDBClient;

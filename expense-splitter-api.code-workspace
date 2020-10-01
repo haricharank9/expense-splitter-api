@@ -6,6 +6,8 @@
   ],
   "settings": {
     "vscOrganizeImports.formatOnSave": false,
-    "editor.codeActionsOnSave": null
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": false
+    }
   }
 }

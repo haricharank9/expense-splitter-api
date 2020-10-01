@@ -1,12 +1,11 @@
 // when a module is loaded @provide() will automatically register it
-import "../mongodb/connection";
-import "../mongodb/client";
+import "../mongodb";
 
 //Controllers
-import "../../controllers/user-controller";
-import "../../controllers/home-controller";
-import "../../controllers/auth-controller";
+import "../../controllers";
+
+//middlewares
+import "../../middlewares";
 
 //Services
-import "../../services/user-service";
-import "../../services/auth-service";
+import "../../services";

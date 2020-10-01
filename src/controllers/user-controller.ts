@@ -8,9 +8,9 @@ import {
   response
 } from "inversify-express-utils";
 import { TYPES } from "../constants/types";
-import { validate } from "../middlewares/validation";
+import { validate } from "../middlewares";
 import { CreateUser } from "../models/request/create-user";
-import { UserService } from "../services/user-service";
+import { UserService } from "../services";
 
 @controller("/users")
 export class UserController extends BaseHttpController {

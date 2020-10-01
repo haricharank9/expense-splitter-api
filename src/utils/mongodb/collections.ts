@@ -1,4 +1,5 @@
 export const collections = {
   user: "user",
-  userLogin: "userLogin"
+  userLogin: "userLogin",
+  expense: "expense"
 };
